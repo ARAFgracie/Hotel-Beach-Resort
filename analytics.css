@@ -1,0 +1,35 @@
+/* analytics.css - Analytics page. Owner: Claude A (rebuilt: the worker file was not delivered). */
+.an-controls { display: flex; gap: 8px; }
+.an-controls .select { width: auto; min-width: 150px; }
+.an-note { margin: -8px 0 0; color: var(--text-muted); font-size: 0.8125rem; }
+.an-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.kpi__label { margin: 0; color: var(--text-muted); font-size: 0.8125rem; font-weight: 600; }
+.kpi__value { margin: 4px 0; font-size: 1.75rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.kpi__note { margin: 0; color: var(--text-muted); font-size: 0.8125rem; }
+.an-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.bars { display: flex; align-items: flex-end; gap: 6px; height: 220px; padding-top: 24px; border-bottom: 1px solid var(--border); }
+.bars__col { flex: 1; min-width: 0; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; }
+.bars__val { font-size: 0.6875rem; color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bars__bar { width: 100%; max-width: 40px; background: var(--accent); border-radius: 4px 4px 0 0; min-height: 2px; }
+.bars__col--now .bars__bar { background: var(--info); }
+.bars__labels { display: flex; gap: 6px; margin-top: 6px; }
+.bars__labels span { flex: 1; text-align: center; font-size: 0.6875rem; color: var(--text-muted); }
+.line { width: 100%; height: auto; display: block; }
+.line__grid { stroke: var(--border); stroke-width: 1; }
+.line__path { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.line__dot { fill: var(--accent); }
+.line__text { fill: var(--text-muted); font-size: 11px; }
+.donut-wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+.donut { width: 160px; height: 160px; border-radius: 50%; position: relative; flex: none; }
+.donut::after { content: ""; position: absolute; inset: 32px; border-radius: 50%; background: var(--surface); }
+.donut__legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.donut__legend li { display: flex; align-items: center; gap: 8px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.hbar { display: grid; gap: 14px; }
+.hbar__row { display: grid; grid-template-columns: 80px 1fr auto; align-items: center; gap: 12px; }
+.hbar__track { height: 16px; border-radius: 8px; background: var(--surface-2); overflow: hidden; }
+.hbar__fill { height: 100%; border-radius: 8px; }
+.hbar__val { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.875rem; }
+td.right, th.right { text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 1000px) { .an-grid { grid-template-columns: 1fr; } }
+@media print { .an-grid { grid-template-columns: 1fr 1fr; } .card { break-inside: avoid; } }

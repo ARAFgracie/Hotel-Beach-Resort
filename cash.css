@@ -1,0 +1,25 @@
+/* cash.css - Cash Receiving page. Owner: Claude A (rebuilt: the worker file was not delivered). */
+.cash-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.stat__label { margin: 0; color: var(--text-muted); font-size: 0.8125rem; font-weight: 600; }
+.stat__value { margin: 4px 0; font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat__value--warn { color: var(--warning); }
+.stat__note { margin: 0; color: var(--text-muted); font-size: 0.8125rem; }
+.cash-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; align-items: start; }
+.cash-side { display: grid; gap: 24px; }
+.card__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.card__head .card__title { margin: 0; }
+.cash-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.cash-filters .input { width: 200px; }
+.cash-filters .select { width: auto; min-width: 130px; }
+.cash-side .field__label { margin-top: 12px; }
+.cash-hint { margin: 6px 0 0; font-size: 0.8125rem; color: var(--text-muted); min-height: 1.2em; }
+.cash-submit { width: 100%; margin-top: 16px; }
+.dc { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; margin: 0 0 12px; }
+.dc dt { color: var(--text-muted); }
+.dc dd { margin: 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.appr { display: grid; gap: 8px; }
+.appr__item { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; border-radius: 8px; background: var(--surface-2); }
+.appr__meta { color: var(--text-muted); font-size: 0.8125rem; }
+td.right, th.right { text-align: right; }
+.tnum { font-variant-numeric: tabular-nums; }
+@media (max-width: 1100px) { .cash-layout { grid-template-columns: 1fr; } }

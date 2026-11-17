@@ -1,0 +1,45 @@
+/* housekeeping.css - Housekeeping page. Owner: Claude C. Relies on base.css. */
+
+.field__label { display: block; margin: 0 0 4px; font-size: 0.8125rem; font-weight: 600; color: var(--text-muted); }
+
+/* Manager-only block. Claude A can hide .role-manager for other roles. */
+.assign__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 16px; align-items: end; }
+.assign__btn { white-space: nowrap; }
+
+.board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.board__col {
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px; display: grid; gap: 12px; align-content: start; border-top: 4px solid var(--border);
+}
+.board__col--dirty { border-top-color: var(--warning); }
+.board__col--progress { border-top-color: var(--accent); }
+.board__col--vacant { border-top-color: var(--success); }
+.board__col--maintenance { border-top-color: var(--danger); }
+.board__title { margin: 0; font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+
+.room-card {
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--border);
+  border-radius: 8px; padding: 12px; display: grid; gap: 8px;
+}
+.room-card--dirty { border-left-color: var(--warning); }
+.room-card--progress { border-left-color: var(--accent); }
+.room-card--vacant { border-left-color: var(--success); }
+.room-card--maintenance { border-left-color: var(--danger); }
+.room-card__head { display: flex; justify-content: space-between; align-items: baseline; }
+.room-card__num { font-size: 1.125rem; }
+.room-card__floor { font-size: 0.8125rem; color: var(--text-muted); }
+.room-card__note { margin: 0; font-size: 0.875rem; color: var(--text-muted); }
+.btn--small { font-size: 0.875rem; padding: 8px 12px; }
+
+@media (max-width: 1200px) {
+  .board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .assign__row { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .board { grid-template-columns: 1fr; }
+}
+
+.board__col { max-height: 640px; overflow-y: auto; }
+.room-card__tags { display: flex; flex-wrap: wrap; gap: 6px; }

@@ -1,0 +1,46 @@
+/* mobile-service.css - Service Staff mobile screen. Owner: Claude C. Relies on base.css. */
+
+.mobile { min-height: 100vh; padding-bottom: 80px; }
+
+.mhead {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 16px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.mhead__name { margin: 0; font-size: 1.25rem; }
+.mhead__shift { margin: 0; font-size: 0.875rem; color: var(--text-muted); }
+
+.mmain { padding: 16px; display: grid; gap: 16px; max-width: 560px; margin: 0 auto; }
+.mmain__title { margin: 0; font-size: 1.125rem; display: flex; align-items: center; gap: 8px; }
+
+.tasks { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.task {
+  background: var(--surface); border: 1px solid var(--border); border-left: 6px solid var(--border);
+  border-radius: 8px; padding: 16px;
+}
+.task--dirty { border-left-color: var(--warning); }
+.task--progress { border-left-color: var(--accent); }
+.task__head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.task__room { font-size: 1.5rem; }
+.task__type { margin: 4px 0 16px; color: var(--text-muted); }
+.task__actions { display: grid; gap: 12px; }
+
+.btn--big { min-height: 56px; font-size: 1.0625rem; width: 100%; }
+
+.bottombar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: var(--surface); border-top: 1px solid var(--border);
+}
+.bottombar__link {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 64px; color: var(--text-muted); font-weight: 600;
+}
+.bottombar__link--active { color: var(--accent); box-shadow: inset 0 3px 0 var(--accent); }
+
+/* Service-specific */
+.task--high { border-left-color: var(--danger); }
+.task--medium { border-left-color: var(--warning); }
+.task--low { border-left-color: var(--success); }
+.task__type { margin-bottom: 4px; font-weight: 600; color: var(--text); }
+.task__time { margin: 0 0 16px; font-size: 0.875rem; color: var(--text-muted); }

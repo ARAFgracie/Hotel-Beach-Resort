@@ -1,0 +1,25 @@
+/* staff.css - Staff Information page. Owner: Claude A (rebuilt: the worker file was not delivered). */
+.toolbar__search { max-width: 420px; flex: 1; }
+.staff__layout { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 24px; align-items: start; }
+.field { display: grid; gap: 4px; }
+.form { display: grid; gap: 12px; }
+.form__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+.detail { position: sticky; top: 84px; }
+.detail__head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.detail__name { margin: 0 0 4px; font-size: 1.25rem; }
+.detail__h { margin: 20px 0 8px; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.detail__text { margin: 0 0 12px; font-size: 0.9375rem; }
+.dl { display: grid; grid-template-columns: 96px 1fr; gap: 6px 12px; margin: 0; }
+.dl dt { color: var(--text-muted); font-size: 0.8125rem; font-weight: 600; }
+.dl dd { margin: 0; overflow-wrap: anywhere; }
+.row-sel { cursor: pointer; }
+.row-sel--on { background: var(--surface-2); }
+.sched { display: grid; grid-template-columns: 56px repeat(7, minmax(0, 1fr)); gap: 4px; font-size: 0.6875rem; }
+.sched__head, .sched__label { color: var(--text-muted); font-weight: 600; text-align: center; align-self: center; }
+.sched__label { text-align: left; }
+.sched__cell { min-height: 36px; display: grid; place-items: center; text-align: center; border-radius: 4px; background: var(--surface-2); color: var(--text-muted); padding: 2px; line-height: 1.2; }
+.sched__cell--on { background: var(--accent); color: #fff; }
+.perm-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.perm-list label { display: flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 500; cursor: pointer; }
+.perm-list input { width: 20px; height: 20px; }
+@media (max-width: 1100px) { .staff__layout { grid-template-columns: 1fr; } .detail { position: static; } }

@@ -1,0 +1,35 @@
+/* dashboard.css - Claude B */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.stat__label { margin: 0; color: var(--text-muted); font-size: .8125rem; font-weight: 600; }
+.stat__value { margin: 4px 0; font-size: 1.5rem; font-weight: 700; }
+.stat__value--vacant { color: var(--success); }
+.stat__value--warn { color: var(--warning); }
+.stat__note { margin: 0; color: var(--text-muted); font-size: .8125rem; }
+.statusbar { display: flex; height: 16px; border-radius: 8px; overflow: hidden; background: var(--surface-2); }
+.statusbar__seg--vacant { flex: 92; background: var(--success); }
+.statusbar__seg--occupied { flex: 268; background: var(--accent); }
+.statusbar__seg--reserved { flex: 24; background: var(--info); }
+.statusbar__seg--dirty { flex: 21; background: var(--warning); }
+.statusbar__seg--maintenance { flex: 12; background: var(--danger); }
+.legend { list-style: none; display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0 0; padding: 0; }
+.split { display: grid; grid-template-columns: 3fr 2fr; gap: 24px; align-items: start; }
+.table-wrap { overflow-x: auto; }
+.floors { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.floors__row { display: grid; grid-template-columns: 64px 1fr 48px; align-items: center; gap: 12px; font-size: .875rem; }
+.floors__bar { width: 100%; height: 10px; border: 0; border-radius: 6px; background: var(--surface-2); overflow: hidden; accent-color: var(--accent); }
+.floors__bar::-webkit-progress-bar { background: var(--surface-2); }
+.floors__bar::-webkit-progress-value { background: var(--accent); }
+.floors__bar::-moz-progress-bar { background: var(--accent); }
+.floors__count { color: var(--text-muted); text-align: right; }
+.feed { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.feed__item { padding-left: 12px; border-left: 3px solid var(--accent); }
+.feed__time { color: var(--text-muted); font-weight: 600; margin-right: 8px; }
+@media (max-width: 1100px) { .split { grid-template-columns: 1fr; } }
+
+.card__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.card__head .card__title { margin: 0; }
+.stat__value { font-variant-numeric: tabular-nums; }
+.floors__bar { accent-color: var(--accent); }
+.floors__bar--hot::-webkit-progress-value { background: var(--warning); }
+.floors__bar--hot::-moz-progress-bar { background: var(--warning); }
+.legend li { display: flex; align-items: center; gap: 8px; }
